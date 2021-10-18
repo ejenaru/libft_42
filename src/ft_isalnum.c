@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/07 12:03:47 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2021/10/18 22:46:21 by idiaz-fo         ###   ########.fr       */
+/*   Created: 2021/10/18 22:41:14 by idiaz-fo          #+#    #+#             */
+/*   Updated: 2021/10/18 22:55:44 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "../ft_libft.h"
 
-int	main(void)
+int	ft_isalnum(int c)
 {
-	int i;
-	int mine;
-  
-  i = isalnum ('-');
-  mine = ft_isalnum ('-');
-  printf ("Original  %d. Mine  %d.\n",i,mine);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

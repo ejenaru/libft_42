@@ -1,24 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/07 12:03:47 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2021/10/18 22:46:21 by idiaz-fo         ###   ########.fr       */
+/*   Created: 2021/10/18 22:31:04 by idiaz-fo          #+#    #+#             */
+/*   Updated: 2021/10/18 22:32:47 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
-
-int	main(void)
+int	ft_isdigit(int c)
 {
-	int i;
-	int mine;
-  
-  i = isalnum ('-');
-  mine = ft_isalnum ('-');
-  printf ("Original  %d. Mine  %d.\n",i,mine);
-	return (0);
+	 return (c >= '0' && c <= '9');
 }

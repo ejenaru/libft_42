@@ -6,7 +6,7 @@
 #    By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 11:06:58 by idiaz-fo          #+#    #+#              #
-#    Updated: 2021/10/18 22:13:26 by idiaz-fo         ###   ########.fr        #
+#    Updated: 2021/10/18 22:41:03 by idiaz-fo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,29 +16,24 @@ FLAGS = -Wall -Wextra -Werror
 
 SRC_DIR = ./src/
 
-NAME = libft.a #mi objetivo final, compilado pero no linkado
+NAME = libft.a 
 
-HEADER = libft.h #la librería que necesito para mi
+HEADER = libft.h 
 
 SRCS = 	ft_atoi.c \
 		ft_strlen.c \
 		ft_strlcpy.c \
-		ft_isalpha.c
+		ft_isalpha.c \
+		ft_isdigit.c \
+		ft_isalnum.c
 
-OBJ = $(SRCS:.c=.o) #los objetos que necesito para crear se llaman como los .c pero con .o
+OBJ = $(SRCS:.c=.o) 
 
 all: $(NAME)
 
-$(NAME): #crea el objeto libft.a compilando el header y los objetos
+$(NAME): 
 	$(CC) $(FLAGS) -c -I $(HEADER) $(addprefix $(SRC_DIR),$(SRCS))
-	#crea todos los objetos -c de cada uno de los sources, pero no los linkea, o sea que crea una pechá de objetos ahi
 	ar rcs $(NAME) $(OBJ) 
-#ar crea con los *.o un archivo llamado NAME que es una colección (uno detrás de otro ahi to pegao) //ar [OPTIONS] archive_name member_files
-#An archive is a single file holding a collection of other files
-#r hace que reemplace el existente o inserte un archivo nuevo si no existe. Permite insertar algo si no está dentro ya. d elimina algo que está dentro
-#c elimina el mensaje que sale
-#s crea un índex de los símbolos que existen, si ponemos este comando, el ranlib de detrás no debería ser util
-	#ranlib $(NAME) #  generates an index to the contents of an archive and it will be stored in the archive // ar -s debería hacer lo msimo
 
 main: main.c $(NAME)
 	$(CC) $(FLAGS) main.c $(NAME) -o main.out && ./main.out
@@ -52,4 +47,4 @@ fclean:
 	
 re: fclean all
 
-.PHONY: clean fclean re all #se pone aqui todos los target que NO tienen un archivo de salida que se llame igual que el target
+.PHONY: clean fclean re all 
