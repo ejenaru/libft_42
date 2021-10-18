@@ -6,7 +6,7 @@
 #    By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 11:06:58 by idiaz-fo          #+#    #+#              #
-#    Updated: 2021/10/18 21:17:48 by idiaz-fo         ###   ########.fr        #
+#    Updated: 2021/10/18 22:13:26 by idiaz-fo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ HEADER = libft.h #la librería que necesito para mi
 
 SRCS = 	ft_atoi.c \
 		ft_strlen.c \
-		ft_strlcpy.c
+		ft_strlcpy.c \
+		ft_isalpha.c
 
 OBJ = $(SRCS:.c=.o) #los objetos que necesito para crear se llaman como los .c pero con .o
 
@@ -38,6 +39,10 @@ $(NAME): #crea el objeto libft.a compilando el header y los objetos
 #c elimina el mensaje que sale
 #s crea un índex de los símbolos que existen, si ponemos este comando, el ranlib de detrás no debería ser util
 	#ranlib $(NAME) #  generates an index to the contents of an archive and it will be stored in the archive // ar -s debería hacer lo msimo
+
+main: main.c $(NAME)
+	$(CC) $(FLAGS) main.c $(NAME) -o main.out && ./main.out
+	rm -rf main.o main.out
 
 clean:
 	rm -rf $(OBJ)

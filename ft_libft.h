@@ -6,7 +6,7 @@
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 17:53:13 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2021/05/26 21:19:04 by idiaz-fo         ###   ########.fr       */
+/*   Updated: 2021/10/18 22:22:47 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@
 # include <stdlib.h>
 # include <string.h>
 #include <stdio.h>
+#include <ctype.h>
 
 int				ft_atoi(char *str);
 size_t			strlen(const char *s);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
+int				ft_isalpha(int c);
 
 #endif
