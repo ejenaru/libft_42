@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+         #
+#    By: idiaz-fo <idiaz-fo@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 11:06:58 by idiaz-fo          #+#    #+#              #
-#    Updated: 2021/10/18 23:20:03 by idiaz-fo         ###   ########.fr        #
+#    Updated: 2021/10/19 15:21:36 by idiaz-fo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,11 +42,16 @@ main: main.c $(NAME)
 	rm -rf main.o main.out
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf $(OBJ) libft.so
 
 fclean:
-	rm -rf $(NAME)
+	rm -rf $(NAME) libft.so
 	
 re: fclean all
 
-.PHONY: clean fclean re all 
+so:
+	$(CC) -nostartfiles -fPIC $(FLAGS) $(addprefix $(SRC_DIR),$(SRCS))
+	gcc -nostartfiles -shared -o libft.so $(OBJ)
+
+
+.PHONY: clean fclean re 
