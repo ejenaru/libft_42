@@ -6,7 +6,7 @@
 #    By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 11:06:58 by idiaz-fo          #+#    #+#              #
-#    Updated: 2021/10/20 18:52:28 by idiaz-fo         ###   ########.fr        #
+#    Updated: 2021/10/20 19:35:17 by idiaz-fo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,9 @@ SRCS = 	ft_atoi.c \
 		ft_isascii.c \
 		ft_isprint.c \
 		ft_bzero.c \
-		ft_memcpy.c
+		ft_memcpy.c \
+		ft_memmove.c \
+		ft_strlcat.c
 
 OBJ = $(SRCS:.c=.o) 
 

@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/09 17:24:09 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2021/10/20 20:03:32 by idiaz-fo         ###   ########.fr       */
+/*   Created: 2021/10/20 19:18:28 by idiaz-fo          #+#    #+#             */
+/*   Updated: 2021/10/20 20:35:44 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_libft.h"
 
-size_t	ft_strlen(const char*s)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	return ((void *)((int)dst + (int)src + len));
 }
