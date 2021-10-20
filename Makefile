@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: idiaz-fo <idiaz-fo@student.42madrid.com    +#+  +:+       +#+         #
+#    By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 11:06:58 by idiaz-fo          #+#    #+#              #
-#    Updated: 2021/10/19 15:21:36 by idiaz-fo         ###   ########.fr        #
+#    Updated: 2021/10/20 18:43:36 by idiaz-fo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,13 +21,14 @@ NAME = libft.a
 HEADER = libft.h 
 
 SRCS = 	ft_atoi.c \
+		ft_isalnum.c \
 		ft_strlen.c \
 		ft_strlcpy.c \
 		ft_isalpha.c \
 		ft_isdigit.c \
-		ft_isalnum.c \
 		ft_isascii.c \
-		ft_isprint.c
+		ft_isprint.c \
+		ft_bzero.c
 
 OBJ = $(SRCS:.c=.o) 
 
@@ -49,7 +50,7 @@ fclean:
 	
 re: fclean all
 
-so:
+so: #ppara linux
 	$(CC) -nostartfiles -fPIC $(FLAGS) $(addprefix $(SRC_DIR),$(SRCS))
 	gcc -nostartfiles -shared -o libft.so $(OBJ)
 
