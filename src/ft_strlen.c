@@ -6,7 +6,7 @@
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 17:24:09 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2021/10/18 20:41:16 by idiaz-fo         ###   ########.fr       */
+/*   Updated: 2021/10/20 18:56:07 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char*s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])
 		i++;
-	return(i);
+	return (i);
 }
