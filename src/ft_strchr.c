@@ -1,16 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/18 23:20:42 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2021/10/20 20:46:37 by idiaz-fo         ###   ########.fr       */
+/*   Created: 2021/10/20 20:48:51 by idiaz-fo          #+#    #+#             */
+/*   Updated: 2021/10/20 20:59:38 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "../ft_libft.h"
+
+char	*ft_strchr(const char *s, int c)
 {
-	return (c >= 32 && c <= 126);
+	size_t	i;
+
+	i = 0;
+	if (!s)
+		return (NULL);
+	while (s[i])
+	{
+		if (s[i] == c)
+			return ((char *)&s[i]);
+		i++;
+	}
+	return (NULL);
 }
