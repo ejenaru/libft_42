@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/07 12:03:47 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2021/10/20 18:09:00 by idiaz-fo         ###   ########.fr       */
+/*   Created: 2021/10/20 22:06:19 by idiaz-fo          #+#    #+#             */
+/*   Updated: 2022/09/20 18:47:53 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libft.h"
 
-int	main(void)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
-	int mine;
-  
-  i = isalnum ('-');
-  mine = ft_isalnum ('-');
-  printf ("Original  %d. Mine  %d.\n",i,mine);
-	return (0);
+	size_t i;
+
+	i = 0;
+	while ((s1[i] == s2[i]) && (i < n) && (s1[i] && s2[i]))
+		i++;
+	if (i == n || !s1 || !s2)
+		return (0);
+	return ((int)(s1[i] - s2[i]));
 }

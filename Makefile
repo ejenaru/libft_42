@@ -6,15 +6,13 @@
 #    By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 11:06:58 by idiaz-fo          #+#    #+#              #
-#    Updated: 2021/10/20 23:00:24 by idiaz-fo         ###   ########.fr        #
+#    Updated: 2022/09/20 18:46:02 by idiaz-fo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 
-FLAGS = -Wall -Wextra -Werror
-
-SRC_DIR = ./src/
+CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a 
 
@@ -44,11 +42,11 @@ OBJ = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): 
-	$(CC) $(FLAGS) -c -I $(HEADER) $(addprefix $(SRC_DIR),$(SRCS))
+	$(CC) $(CFLAGS) -c -I $(HEADER) $(SRCS)
 	ar rcs $(NAME) $(OBJ) 
 
 main: main.c $(NAME)
-	$(CC) $(FLAGS) main.c $(NAME) -o main.out && ./main.out
+	$(CC) $(CFLAGS) main.c $(NAME) -o main.out && ./main.out
 	rm -rf main.o main.out
 
 clean:
@@ -60,7 +58,7 @@ fclean:
 re: fclean all
 
 so: #ppara linux
-	$(CC) -nostartfiles -fPIC $(FLAGS) $(addprefix $(SRC_DIR),$(SRCS))
+	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
 	gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 

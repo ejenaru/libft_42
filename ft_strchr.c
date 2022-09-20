@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/09 17:24:09 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2021/10/20 20:03:32 by idiaz-fo         ###   ########.fr       */
+/*   Created: 2021/10/20 20:48:51 by idiaz-fo          #+#    #+#             */
+/*   Updated: 2022/09/20 18:47:43 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_libft.h"
+#include "ft_libft.h"
 
-size_t	ft_strlen(const char*s)
+char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	while (s[i])
+	{
+		if (s[i] == c)
+			return ((char *)&s[i]);
 		i++;
-	return (i);
+	}
+	return (NULL);
 }

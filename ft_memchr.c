@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 18:49:39 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2021/10/20 19:15:47 by idiaz-fo         ###   ########.fr       */
+/*   Created: 2021/10/20 22:52:03 by idiaz-fo          #+#    #+#             */
+/*   Updated: 2022/09/20 18:47:22 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_libft.h"
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+#include  "ft_libft.h"
+void	*ft_memchr(const void *s, int c, size_t n)
 {
+	unsigned char	d;
 	size_t			i;
-	unsigned char	*dst_cp;
-	unsigned char	*src_cp;
-
-	dst_cp = (unsigned char *)dst;
-	src_cp = (unsigned char *)src;
+	unsigned char	*s_cp;
+	
 	i = 0;
-	if (!dst)
-		return (dst);
-	while (i < n)
+	d = (unsigned char)c;
+	s_cp = (unsigned char*)s;
+	while (i< n)
 	{
-		dst_cp[i] = src_cp[i];
+		if (s_cp[i] == d)
+		{
+			
+		}
 		i++;
 	}
-	return (dst);
+	return NULL;
 }
