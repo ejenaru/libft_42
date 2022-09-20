@@ -6,7 +6,7 @@
 #    By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 11:06:58 by idiaz-fo          #+#    #+#              #
-#    Updated: 2022/09/20 18:46:02 by idiaz-fo         ###   ########.fr        #
+#    Updated: 2022/09/20 18:57:52 by idiaz-fo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,11 +39,17 @@ SRCS = 	ft_atoi.c \
 
 OBJ = $(SRCS:.c=.o) 
 
+
+#########################################
+
 all: $(NAME)
 
-$(NAME): 
-	$(CC) $(CFLAGS) -c -I $(HEADER) $(SRCS)
+$(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ) 
+	
+$(OBJ):$(SRCS)
+	$(CC) $(CFLAGS) -c -I $(HEADER) $(SRCS)
+
 
 main: main.c $(NAME)
 	$(CC) $(CFLAGS) main.c $(NAME) -o main.out && ./main.out
@@ -56,10 +62,6 @@ fclean:
 	rm -rf $(NAME) libft.so
 	
 re: fclean all
-
-so: #ppara linux
-	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 
 .PHONY: clean fclean re 

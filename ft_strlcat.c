@@ -6,7 +6,7 @@
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 19:36:29 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2022/09/20 18:47:36 by idiaz-fo         ###   ########.fr       */
+/*   Updated: 2022/09/20 19:12:00 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	if (size <= i)
 		return (srcsize + size);
 	j = 0;
-	while (j < (size - i - 1) && src[j] != 0 )
+	while (j < (size - i - 1) && src[j] != 0)
 	{
 		dest[i + j] = src[j];
 		j++;

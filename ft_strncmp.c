@@ -6,7 +6,7 @@
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 22:06:19 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2022/09/20 18:47:53 by idiaz-fo         ###   ########.fr       */
+/*   Updated: 2022/09/20 19:12:23 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while ((s1[i] == s2[i]) && (i < n) && (s1[i] && s2[i]))
