@@ -6,7 +6,7 @@
 #    By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 11:06:58 by idiaz-fo          #+#    #+#              #
-#    Updated: 2022/09/20 18:57:52 by idiaz-fo         ###   ########.fr        #
+#    Updated: 2022/09/21 16:45:49 by idiaz-fo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,11 +49,6 @@ $(NAME): $(OBJ)
 	
 $(OBJ):$(SRCS)
 	$(CC) $(CFLAGS) -c -I $(HEADER) $(SRCS)
-
-
-main: main.c $(NAME)
-	$(CC) $(CFLAGS) main.c $(NAME) -o main.out && ./main.out
-	rm -rf main.o main.out
 
 clean:
 	rm -rf $(OBJ) libft.so
