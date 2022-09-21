@@ -6,7 +6,7 @@
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 17:53:13 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2022/09/21 21:44:23 by idiaz-fo         ###   ########.fr       */
+/*   Updated: 2022/09/21 22:16:21 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int				ft_isascii(int c);
 int				ft_isprint(int c);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
-void			*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
+void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memset(void *b, int c, size_t len);
 size_t			ft_strlcat(char *dest, const char *src, size_t size);
