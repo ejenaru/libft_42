@@ -6,7 +6,7 @@
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 17:53:13 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2022/09/21 17:17:31 by idiaz-fo         ###   ########.fr       */
+/*   Updated: 2022/09/21 21:22:16 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int				ft_isprint(int c);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
+void			*ft_memset(void *b, int c, size_t len);
 size_t			ft_strlcat(char *dest, const char *src, size_t size);
 int				ft_toupper(int c);
 int				ft_tolower(int c);

@@ -6,7 +6,7 @@
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:54:06 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2022/09/21 20:40:01 by idiaz-fo         ###   ########.fr       */
+/*   Updated: 2022/09/21 21:13:21 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	long	numout;
-	int		i;
+	size_t		i;
 	int		sign;
 
 	sign = 1;

@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 18:21:43 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2022/09/21 21:19:29 by idiaz-fo         ###   ########.fr       */
+/*   Created: 2022/09/21 21:20:45 by idiaz-fo          #+#    #+#             */
+/*   Updated: 2022/09/21 21:25:49 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t			i;
-	unsigned char	*s_copy;
+	size_t i;
+	unsigned char	*b_copy;
 
-	s_copy = (unsigned char *)s;
+	b_copy = (unsigned char *)b;
 	i = 0;
-	while (i < n)
+	while (i < len)
 	{
-		s_copy[i] = 0;
+		b_copy[i] = c;
 		i++;
 	}
+	return b;
 }
