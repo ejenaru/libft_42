@@ -6,7 +6,7 @@
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:54:06 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2022/09/21 17:17:16 by idiaz-fo         ###   ########.fr       */
+/*   Updated: 2022/09/21 17:50:02 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,13 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(str[i]))
 	{
+		if (i == 19 && str[i] > '7' && sign == 1)
+		{
+			return (-1);
+		} else if (i == 20 && str[i] > '6' && sign == -1)
+		{
+			return (-1);
+		}
 		numout = (numout * 10) + (str[i] - '0');
 		i++;
 	}

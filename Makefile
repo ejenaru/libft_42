@@ -6,7 +6,7 @@
 #    By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 11:06:58 by idiaz-fo          #+#    #+#              #
-#    Updated: 2022/09/21 16:45:49 by idiaz-fo         ###   ########.fr        #
+#    Updated: 2022/09/21 17:34:56 by idiaz-fo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,8 @@ fclean:
 	rm -rf $(NAME) libft.so
 	
 re: fclean all
+
+s: clean fclean
 
 
 .PHONY: clean fclean re 
