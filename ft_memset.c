@@ -6,7 +6,7 @@
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 21:20:45 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2022/09/21 21:25:49 by idiaz-fo         ###   ########.fr       */
+/*   Updated: 2022/09/21 21:28:26 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t i;
+	size_t			i;
 	unsigned char	*b_copy;
 
 	b_copy = (unsigned char *)b;
@@ -24,5 +24,5 @@ void	*ft_memset(void *b, int c, size_t len)
 		b_copy[i] = c;
 		i++;
 	}
-	return b;
+	return (b);
 }
