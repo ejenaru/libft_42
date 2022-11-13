@@ -6,7 +6,7 @@
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 19:18:28 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2022/11/13 18:45:21 by idiaz-fo         ###   ########.fr       */
+/*   Updated: 2022/11/13 19:36:55 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,18 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t		i;
-	char		*dstcpy;
-	char		*srccpy;
+	size_t				i;
+	unsigned char		*dstcpy;
+	unsigned char		*srccpy;
 
-	dstcpy = (char *)dst;
-	srccpy = (char *)src;
-	i = 0;
+	dstcpy = (unsigned char *)dst;
+	srccpy = (unsigned char *)src;
+	i = len;
 	if(dst == 0 && src == 0)
 		return (dst);
-	while (i < len)
+	while (i-- > 0)
 	{
-		if(dst == &dstcpy[i + 1])
-			return (dst);
 		dstcpy[i] = srccpy[i];
-		i++;
 	}
 	return (dst);
 }
