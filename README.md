@@ -21,7 +21,7 @@ Libft is a project that
 - [X] ft_strchr
 - [X] ft_strrchr
 - [X] ft_strncmp
-- [ ] ft_strlcpy
+- [X] ft_strlcpy
 - [X] ft_strlcat
 - [ ] ft_strnstr
 - [X] ft_atoi
