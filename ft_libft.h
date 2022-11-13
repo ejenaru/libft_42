@@ -6,7 +6,7 @@
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 17:53:13 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2022/09/21 22:16:21 by idiaz-fo         ###   ########.fr       */
+/*   Updated: 2022/11/13 15:27:58 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 int				ft_atoi(const char *str);
 size_t			ft_strlen(const char *s);
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
+size_t			ft_strlcpy(char *restrict dst, const char *src, size_t dstsize);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
