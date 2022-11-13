@@ -18,7 +18,7 @@ Libft is a project that
 - [X] ft_isprint
 - [X] ft_toupper
 - [X] ft_tolower
-- [ ] ft_strchr
+- [X] ft_strchr
 - [X] ft_strrchr
 - [ ] ft_strncmp
 - [ ] ft_strlcpy
