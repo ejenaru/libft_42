@@ -6,7 +6,7 @@
 /*   By: idiaz-fo <idiaz-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 18:49:39 by idiaz-fo          #+#    #+#             */
-/*   Updated: 2022/09/21 21:34:08 by idiaz-fo         ###   ########.fr       */
+/*   Updated: 2022/11/13 20:08:32 by idiaz-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t			i;
-	unsigned char	*dst_copy;
-	unsigned char	*src_copy;
+	unsigned char	*dstcpy;
+	unsigned char	*srccpy;
 
-	dst_copy = (unsigned char *)dst;
-	src_copy = (unsigned char *)src;
+	dstcpy = (unsigned char *)dst;
+	srccpy = (unsigned char *)src;
 	i = 0;
 	if (!dst && !src)
 		return (dst);
 	while (i < n)
 	{
-		dst_copy[i] = src_copy[i];
+		dstcpy[i] = srccpy[i];
 		i++;
 	}
 	return (dst);
